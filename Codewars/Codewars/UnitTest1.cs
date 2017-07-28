@@ -21,7 +21,7 @@ namespace Codewars
     {
         public int Score(int[] dice)
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
 }
