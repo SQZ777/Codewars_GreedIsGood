@@ -97,22 +97,13 @@ namespace Codewars
         public int Score(int[] dice)
         {
             var result = 0;
-            if (CountNum(dice, 2) >= 3)
-                result += 200;
-            if (CountNum(dice, 3) >= 3)
-                result += 300;
-            if (CountNum(dice, 4) >= 3)
-                result += 400;
-            if (CountNum(dice, 5) >= 3)
-                result += 500;
-            if (CountNum(dice, 6) >= 3)
-                result += 600;
-            if (CountNum(dice, 1) >= 3)
-                result += 1000;
-
-
-            result += CountNum(dice, 5) * 50;
-            result += CountNum(dice, 1) * 100;
+            for (int i = 2; i < 7; i++)
+            {
+                if (CountNum(dice, i) >= 3 && i != 5)
+                    result += i * 100;
+            }
+            result += (CountNum(dice, 5) >= 3) ? 500 + ((CountNum(dice, 5) - 3) * 50) : CountNum(dice, 5) * 50;
+            result += (CountNum(dice, 1) >= 3) ? 1000 + ((CountNum(dice, 1) - 3) * 100) : CountNum(dice, 1) * 100;
 
             return result;
         }
