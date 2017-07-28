@@ -10,20 +10,24 @@ namespace Codewars
         [TestMethod]
         public void Input_23462_Should_Be_0()
         {
-            var kata = new Kata();
-            var input = new[] { 2, 3, 4, 6, 2 };
-            var actual = kata.Score(input);
-            var expected = 0;
-            Assert.AreEqual(expected, actual);
+            SorceResult(0, new[] { 2, 3, 4, 6, 2 });
         }
 
         [TestMethod]
         public void Input_52346_Should_Be_50()
         {
+            SorceResult(50, new[] { 5, 2, 3, 4, 6 });
+        }
+
+        [TestMethod]
+        public void Input_12346_Should_Be_100()
+        {
+            SorceResult(100, new[] { 1, 2, 3, 4, 6 });
+        }
+        private static void SorceResult(int expected, int[] input)
+        {
             var kata = new Kata();
-            var input = new[] { 5, 2, 3, 4, 6 };
             var actual = kata.Score(input);
-            var expected = 50;
             Assert.AreEqual(expected, actual);
         }
     }
@@ -33,11 +37,11 @@ namespace Codewars
         public int Score(int[] dice)
         {
             var result = 0;
-            result += judge50(dice);
+            result += Judge50(dice);
             return result;
         }
 
-        private static int judge50(int[] dice)
+        private static int Judge50(int[] dice)
         {
             var result = 0;
             for (int i = 0; i < 5; i++)
@@ -47,5 +51,7 @@ namespace Codewars
             }
             return result * 50;
         }
+
+        
     }
 }
