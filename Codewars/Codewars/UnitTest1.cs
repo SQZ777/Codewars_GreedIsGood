@@ -116,7 +116,6 @@ namespace Codewars
             }
             result += (CountNum(dice, 5) >= 3) ? 500 + ((CountNum(dice, 5) - 3) * 50) : CountNum(dice, 5) * 50;
             result += (CountNum(dice, 1) >= 3) ? 1000 + ((CountNum(dice, 1) - 3) * 100) : CountNum(dice, 1) * 100;
-
             return result;
         }
 
