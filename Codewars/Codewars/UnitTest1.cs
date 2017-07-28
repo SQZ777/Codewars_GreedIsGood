@@ -15,6 +15,17 @@ namespace Codewars
             var expected = 0;
             Assert.AreEqual(expected,actual);
         }
+
+        [TestMethod]
+        public void Input_52346_Should_Be_50()
+        {
+            var kata = new Kata();
+            var input = new [] {5, 2, 3, 4, 6};
+            var actual = kata.Score(input);
+            var expected = 50;
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 
     public class Kata
