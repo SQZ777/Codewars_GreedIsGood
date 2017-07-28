@@ -63,6 +63,8 @@ namespace Codewars
             result += CountNum(dice, 1) * 100;
             if (CountNum(dice, 2) >= 3)
                 result += 200;
+            if (CountNum(dice, 3) >= 3)
+                result += 300;
 
 
             return result;
