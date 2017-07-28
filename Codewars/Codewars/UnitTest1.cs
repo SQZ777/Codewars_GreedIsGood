@@ -33,12 +33,19 @@ namespace Codewars
         public int Score(int[] dice)
         {
             var result = 0;
+            result += judge50(dice);
+            return result;
+        }
+
+        private static int judge50(int[] dice)
+        {
+            var result = 0;
             for (int i = 0; i < 5; i++)
             {
                 if (dice[i] == 5)
                     result++;
             }
-            return 50 * result;
+            return result * 50;
         }
     }
 }
