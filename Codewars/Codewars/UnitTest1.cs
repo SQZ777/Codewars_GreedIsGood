@@ -49,6 +49,12 @@ namespace Codewars
         }
 
         [TestMethod]
+        public void Input_14446_Shoud_Be_300()
+        {
+            SorceResult(400, new[] { 1, 4, 4, 4, 6 });
+        }
+
+        [TestMethod]
         public void Input_33315_Should_Be_450()
         {
             SorceResult(450, new[] { 3, 3, 3, 1, 5 });
