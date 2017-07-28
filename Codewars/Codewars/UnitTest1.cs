@@ -35,6 +35,9 @@ namespace Codewars
         {
             SorceResult(200, new[] { 2, 2, 2, 4, 6 });
         }
+
+
+
         private static void SorceResult(int expected, int[] input)
         {
             var kata = new Kata();
@@ -48,12 +51,15 @@ namespace Codewars
         public int Score(int[] dice)
         {
             var result = 0;
-            result += Array.FindAll(dice, x => x == 5).Count() * 50;
-            result += Array.FindAll(dice, x => x == 1).Count() * 100;
+            result += CountNum(dice, 5) * 50;
+            result += CountNum(dice, 1) * 100;
 
             return result;
         }
 
-
+        private static int CountNum(int[] dice, int num)
+        {
+            return Array.FindAll(dice, x => x == num).Count();
+        }
     }
 }
