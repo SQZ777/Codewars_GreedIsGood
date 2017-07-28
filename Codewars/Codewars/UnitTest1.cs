@@ -79,7 +79,6 @@ namespace Codewars
         public int Score(int[] dice)
         {
             var result = 0;
-            result += CountNum(dice, 5) * 50;
             result += CountNum(dice, 1) * 100;
             if (CountNum(dice, 2) >= 3)
                 result += 200;
@@ -89,6 +88,9 @@ namespace Codewars
                 result += 400;
             if (CountNum(dice, 5) >= 3)
                 result += 500;
+            else
+                result += CountNum(dice, 5) * 50;
+
 
             return result;
         }
