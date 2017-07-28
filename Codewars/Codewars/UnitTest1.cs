@@ -49,9 +49,9 @@ namespace Codewars
         }
 
         [TestMethod]
-        public void Input_14446_Shoud_Be_300()
+        public void Input_24446_Shoud_Be_400()
         {
-            SorceResult(400, new[] { 1, 4, 4, 4, 6 });
+            SorceResult(400, new[] { 2, 4, 4, 4, 6 });
         }
 
         [TestMethod]
@@ -78,7 +78,8 @@ namespace Codewars
                 result += 200;
             if (CountNum(dice, 3) >= 3)
                 result += 300;
-
+            if (CountNum(dice, 4) >= 3)
+                result += 400;
 
             return result;
         }
