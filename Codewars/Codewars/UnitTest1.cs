@@ -66,6 +66,12 @@ namespace Codewars
             SorceResult(500, new[] { 2, 5, 5, 5, 6 });
         }
 
+        [TestMethod]
+        public void Input_23666_Shoud_Be_600()
+        {
+            SorceResult(600, new[] { 2, 3, 6, 6, 6 });
+        }
+
         private static void SorceResult(int expected, int[] input)
         {
             var kata = new Kata();
@@ -90,7 +96,7 @@ namespace Codewars
                 result += 500;
             else
                 result += CountNum(dice, 5) * 50;
-
+            
 
             return result;
         }
