@@ -37,28 +37,12 @@ namespace Codewars
         public int Score(int[] dice)
         {
             var result = 0;
-            result += Judge50(dice);
-            var judge1 = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                if (dice[i] == 1)
-                    judge1++;
-            }
-            result += judge1 * 100;
+            result += Array.FindAll(dice, x => x == 5).Count() * 50;
+            result += Array.FindAll(dice, x => x == 1).Count() * 100;
+
             return result;
         }
 
-        private static int Judge50(int[] dice)
-        {
-            var result = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                if (dice[i] == 5)
-                    result++;
-            }
-            return result * 50;
-        }
 
-        
     }
 }
