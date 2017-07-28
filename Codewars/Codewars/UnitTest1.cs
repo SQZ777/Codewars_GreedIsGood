@@ -49,16 +49,23 @@ namespace Codewars
         }
 
         [TestMethod]
+        public void Input_33315_Should_Be_450()
+        {
+            SorceResult(450, new[] { 3, 3, 3, 1, 5 });
+        }
+
+        [TestMethod]
         public void Input_24446_Shoud_Be_400()
         {
             SorceResult(400, new[] { 2, 4, 4, 4, 6 });
         }
 
         [TestMethod]
-        public void Input_33315_Should_Be_450()
+        public void Input_25556_Shoud_Be_500()
         {
-            SorceResult(450, new[] { 3, 3, 3, 1, 5 });
+            SorceResult(500, new[] { 2, 5, 5, 5, 6 });
         }
+
         private static void SorceResult(int expected, int[] input)
         {
             var kata = new Kata();
@@ -80,6 +87,8 @@ namespace Codewars
                 result += 300;
             if (CountNum(dice, 4) >= 3)
                 result += 400;
+            if (CountNum(dice, 5) >= 3)
+                result += 500;
 
             return result;
         }
