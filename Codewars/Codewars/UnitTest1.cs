@@ -41,7 +41,11 @@ namespace Codewars
         {
             SorceResult(350, new[] { 2, 2, 2, 1, 5 });
         }
-
+        [TestMethod]
+        public void Input_33346_Shoud_Be_300()
+        {
+            SorceResult(300, new[] { 3, 3, 3, 4, 6 });
+        }
         private static void SorceResult(int expected, int[] input)
         {
             var kata = new Kata();
