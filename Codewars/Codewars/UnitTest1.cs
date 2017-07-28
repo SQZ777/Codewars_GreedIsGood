@@ -38,6 +38,13 @@ namespace Codewars
         {
             var result = 0;
             result += Judge50(dice);
+            var judge1 = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                if (dice[i] == 1)
+                    judge1++;
+            }
+            result += judge1 * 100;
             return result;
         }
 
