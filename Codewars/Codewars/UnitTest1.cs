@@ -36,7 +36,11 @@ namespace Codewars
             SorceResult(200, new[] { 2, 2, 2, 4, 6 });
         }
 
-
+        [TestMethod]
+        public void Input_22215_Should_Be_150()
+        {
+            SorceResult(350, new[] { 2, 2, 2, 1, 5 });
+        }
 
         private static void SorceResult(int expected, int[] input)
         {
@@ -53,6 +57,9 @@ namespace Codewars
             var result = 0;
             result += CountNum(dice, 5) * 50;
             result += CountNum(dice, 1) * 100;
+            if (CountNum(dice, 2) >= 3)
+                result += 200;
+
 
             return result;
         }
